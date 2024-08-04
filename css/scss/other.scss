@@ -1,0 +1,10 @@
+input[type="week"] {
+    padding-left: 16px; 
+}
+
+input[type="week"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+    color: white;
+    width: 20px;
+    height: 20px;
+}

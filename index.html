@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/clear.css">
+</head>
+
+<body>
+    <header id="main" class="header container">
+        <div class="container">
+            <div class="header__bar">
+                <img class="header__logo" src="images/logo.svg" alt="Mountains">
+                <button class="burger header__open" onclick="openMenu()">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.5 7.5C4.5 7.10218 4.65804 6.72064 4.93934 6.43934C5.22064 6.15804 5.60218 6 6 6H24C24.3978 6 24.7794 6.15804 25.0607 6.43934C25.342 6.72064 25.5 7.10218 25.5 7.5C25.5 7.89782 25.342 8.27936 25.0607 8.56066C24.7794 8.84196 24.3978 9 24 9H6C5.60218 9 5.22064 8.84196 4.93934 8.56066C4.65804 8.27936 4.5 7.89782 4.5 7.5ZM4.5 15C4.5 14.6022 4.65804 14.2206 4.93934 13.9393C5.22064 13.658 5.60218 13.5 6 13.5H24C24.3978 13.5 24.7794 13.658 25.0607 13.9393C25.342 14.2206 25.5 14.6022 25.5 15C25.5 15.3978 25.342 15.7794 25.0607 16.0607C24.7794 16.342 24.3978 16.5 24 16.5H6C5.60218 16.5 5.22064 16.342 4.93934 16.0607C4.65804 15.7794 4.5 15.3978 4.5 15ZM13.5 22.5C13.5 22.1022 13.658 21.7206 13.9393 21.4393C14.2206 21.158 14.6022 21 15 21H24C24.3978 21 24.7794 21.158 25.0607 21.4393C25.342 21.7206 25.5 22.1022 25.5 22.5C25.5 22.8978 25.342 23.2794 25.0607 23.5607C24.7794 23.842 24.3978 24 24 24H15C14.6022 24 14.2206 23.842 13.9393 23.5607C13.658 23.2794 13.5 22.8978 13.5 22.5Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <div class="header__nav-button">
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="item"><a class="navbar__link" href="#main">Главная</a></li>
+                            <li class="item"><a class="navbar__link" href="#about">Про гида</a></li>
+                            <li class="item"><a class="navbar__link" href="#programms">Программа тура</a></li>
+                            <li class="item"><a class="navbar__link" href="#cost">Стоимость</a></li>
+                            <li class="item"><a class="navbar__link" href="#blog">Блог</a></li>
+                            <li class="item"><a class="navbar__link" href="#contact">Контакты</a></li>
+                        </ul>
+                        <button class="navbar__button button">Консультация</button>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__menu">
+                <div class="container">
+                    <button class="burger header__close" onclick="closeMenu()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <nav>
+                        <ul class="menu">
+                            <li class="item">
+                                <button onclick="closeMenu()">
+                                    <a class="menu__link" href="#about">
+                                        <svg class="menu__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_37)">
+                                                <path
+                                                    d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_37">
+                                                    <rect width="9.87491" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg><span>Про гида</span>
+                                    </a>
+                                </button>
+                            </li>
+                            <li class="item">
+                                <button onclick="closeMenu()">
+                                    <a class="menu__link" href="#programms">
+                                        <svg class="menu__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_37)">
+                                                <path
+                                                    d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_37">
+                                                    <rect width="9.87491" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg><span>Программа тура</span>
+                                    </a>
+                                </button>
+                            </li>
+                            <li class="item">
+                                <button onclick="closeMenu()">
+                                    <a class="menu__link" href="#cost">
+                                        <svg class="menu__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_37)">
+                                                <path
+                                                    d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_37">
+                                                    <rect width="9.87491" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg><span>Стоимость</span>
+                                    </a>
+                                </button>
+                            </li>
+                            <li class="item">
+                                <button onclick="closeMenu()">
+                                    <a class="menu__link" href="#blog">
+                                        <svg class="menu__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_37)">
+                                                <path
+                                                    d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_37">
+                                                    <rect width="9.87491" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg><span>Блог</span>
+                                    </a>
+                                </button>
+                            </li>
+                            <li class="item">
+                                <button onclick="closeMenu()">
+                                    <a class="menu__link" href="#contact">
+                                        <svg class="menu__icon" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_1_37)">
+                                                <path
+                                                    d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_1_37">
+                                                    <rect width="9.87491" height="14" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg><span>Контакты</span>
+                                    </a>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header__content">
+                <h1 class="header__heading">Насладись прогулкой в горы <br> с командой единомышленников</h1>
+                <button class="header__button button">Найти программу</button>
+            </div>
+            <form class="form" action="">
+                <div class="form__container">
+                    <div class="form__item">
+                        <select class="form__input" name="Локация для тура" id="">
+                            <option class="form__option" value="">Локация для тура</option>
+                            <option class="form__option" value="">Москва</option>
+                            <option class="form__option" value="">Санкт-Петербург</option>
+                            <option class="form__option" value="">Новосибирск</option>
+                            <option class="form__option" value="">Екатеринбург</option>
+                            <option class="form__option" value="">Казань</option>
+                            <option class="form__option" value="">Нижний Новгород</option>
+                            <option class="form__option" value="">Челябинск</option>
+                        </select>
+                        <p class="form__text">выберите из списка</p>
+                    </div>
+                    <div class="form__item">
+                        <input class="form__input" type="week" id="week" name="week" />
+                        <p class="form__text">укажите диапозон</p>
+                    </div>
+                    <div class="form__item">
+                        <select class="form__input" name="Участники" id="">
+                            <option class="form__option" value="">Участники</option>
+                            <option class="form__option" value="">Один участник</option>
+                            <option class="form__option" value="">Два участника</option>
+                            <option class="form__option" value="">Три участника</option>
+                            <option class="form__option" value="">Четыре участника</option>
+                        </select>
+                        <p class="form__text">минимум 4 человека</p>
+                    </div>
+                    <div class="form__item">
+                        <button class="button form__button">Найти программу</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about__content">
+                    <div class="about__text">
+                        <p class="about__subtitle subtitle">о нашем походе</p>
+                        <h2 class="about__heading heading">Исследуйте все горные массивы мира вместе с нами</h2>
+                        <p class="about__description description">Его корни уходят в один фрагмент классической латыни
+                            45 года н.э.,
+                            то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа
+                            Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum,
+                            "consectetur"и занялся его поисками в классической латинской литературе.</p>
+                        <button class="button about__button">Программа тура</button>
+                    </div>
+                    <div class="about__figure-container">
+                        <div class="about__video">
+                            <img class="about__video-image" src="./images/about_video.png" alt="image">
+                            <button class="about__play-button"><svg class="about__play-img" width="25" height="27"
+                                    viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g filter="url(#filter0_d_0_241)">
+                                        <path
+                                            d="M9.27407 3.65572C8.99848 3.49647 8.68638 3.41323 8.369 3.41432C8.05162 3.4154 7.74009 3.50078 7.46557 3.6619C7.19105 3.82302 6.96317 4.05424 6.80473 4.33242C6.64629 4.6106 6.56285 4.926 6.56274 5.24705V16.7549C6.56285 17.0759 6.64629 17.3913 6.80473 17.6695C6.96317 17.9477 7.19105 18.1789 7.46557 18.34C7.74009 18.5012 8.05162 18.5865 8.369 18.5876C8.68638 18.5887 8.99848 18.5055 9.27407 18.3462L19.2277 12.5914C19.5049 12.431 19.7352 12.1993 19.8955 11.9199C20.0557 11.6404 20.1401 11.3231 20.1401 11C20.1401 10.677 20.0557 10.3597 19.8955 10.0802C19.7352 9.80079 19.5049 9.56913 19.2277 9.40872L9.27407 3.65572Z"
+                                            fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_d_0_241" x="-3.34302" y="0" width="29.6857" height="30"
+                                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                            <feColorMatrix in="SourceAlpha" type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                                            <feOffset dy="4" />
+                                            <feGaussianBlur stdDeviation="2" />
+                                            <feComposite in2="hardAlpha" operator="out" />
+                                            <feColorMatrix type="matrix"
+                                                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                                            <feBlend mode="normal" in2="BackgroundImageFix"
+                                                result="effect1_dropShadow_0_241" />
+                                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_241"
+                                                result="shape" />
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="about__image" src="./images/about_image.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="programms" class="programms">
+            <div class="container">
+                <div class="programms__content">
+                    <div class="programms__text">
+                        <p class="programms__subtitle subtitle">наше предложение</p>
+                        <h2 class="programms__heading heading">Лучшие программы для тебя</h2>
+                        <p class="programms__description description">Его корни уходят в один фрагмент классической
+                            латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор
+                            латыни из колледжа.</p>
+                        <div class="advantages">
+                            <div class="advantages__item">
+                                <img class="advantages__image" src="./images/advantage_1.svg" alt="">
+                                <div class="advantages__text">
+                                    <h3 class="advantages__heading">Опытный гид</h3>
+                                    <p class="advantages__description">Для современного мира базовый вектор развития
+                                        предполагает независимые способы реализации соответствующих условий активизации.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="advantages__item">
+                                <img class="advantages__image" src="./images/advantage_2.svg" alt="">
+                                <div class="advantages__text">
+                                    <h3 class="advantages__heading">Безопасный поход</h3>
+                                    <p class="advantages__description">Для современного мира базовый вектор развития
+                                        предполагает независимые способы реализации соответствующих условий активизации.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="advantages__item">
+                                <img class="advantages__image" src="./images/advantage_3.svg" alt="">
+                                <div class="advantages__text">
+                                    <h3 class="advantages__heading">Лояльные цены</h3>
+                                    <p class="advantages__description">Для современного мира базовый вектор развития
+                                        предполагает независимые способы реализации соответствующих условий активизации.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button class="programms__button button">Стоимость программ</button>
+                    </div>
+                    <img class="programms__image" src="./images/programms.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="cost" class="direction">
+            <div class="container">
+                <div class="direction__content">
+                    <div class="direction__text">
+                        <p class="direction__subtitle subtitle">по версии отдыхающих</p>
+                        <h2 class="direction__heading heading">Популярные направления</h2>
+                    </div>
+                    <div class="slider">
+                        <div class="slider__slides">
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__rating">
+                                            <div class="card__substrate">
+                                                <img class="card__star" src="./images/star.svg" alt="">
+                                                <p class="card__rating-text">5.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__description">
+                                            <div class="card__substrate">
+                                                <div class="card__main-info">
+                                                    <div>
+                                                        <p class="card__heading">Озеро возле гор</p>
+                                                        <p class="card__subtitle">романтическое приключение</p>
+                                                    </div>
+                                                    <div class="card__price">
+                                                        <p class="card__price-text">480 $</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__rating">
+                                            <div class="card__substrate">
+                                                <img class="card__star" src="./images/star.svg" alt="">
+                                                <p class="card__rating-text">4.5</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__description">
+                                            <div class="card__substrate">
+                                                <div class="card__main-info">
+                                                    <div>
+                                                        <p class="card__heading">Ночь в горах</p>
+                                                        <p class="card__subtitle">в компании друзей</p>
+                                                    </div>
+                                                    <div class="card__price">
+                                                        <p class="card__price-text">480 $</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__rating">
+                                            <div class="card__substrate">
+                                                <img class="card__star" src="./images/star.svg" alt="">
+                                                <p class="card__rating-text">5.0</p>
+                                            </div>
+                                        </div>
+                                        <div class="card__description">
+                                            <div class="card__substrate">
+                                                <div class="card__main-info">
+                                                    <div>
+                                                        <p class="card__heading">Йога в горах</p>
+                                                        <p class="card__subtitle">для тех, кто забоится о себе</p>
+                                                    </div>
+                                                    <div class="card__price">
+                                                        <p class="card__price-text">480 $</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="direction__button button">Рейтинг направлений</button></button>
+                </div>
+            </div>
+        </section>
+        <section id="blog" class="blog">
+            <div class="container">
+                <div class="blog__content">
+                    <div class="blog__text">
+                        <p class="blog__subtitle subtitle">делимся впечатлениями</p>
+                        <h2 class="blog__heading heading">Блог о путешествиях</h2>
+                    </div>
+                    <div class="slider">
+                        <div class="slider__slides">
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <img class="card__outter-image" src="./images/blog1.png" alt="">
+                                    <div class="card__content">
+                                        <img class="card__inner-image" src="./images/blog1LG.png" alt="">
+                                        <div class="card__text">
+                                            <a class="card__heading-link" href="">Красивая Италия, какая она в
+                                                реальности?</a>
+                                            <p class="card__description">Для современного мира базовый вектор развития
+                                                предполагает независимые способы реализации соответствующих условий
+                                                активизации.</p>
+                                            <div class="card__other">
+                                                <p class="card__date">01/04/2023</p>
+                                                <a class="card__link" href="">читать статью</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <img class="card__outter-image" src="./images/blog2.png" alt="">
+                                    <div class="card__content">
+                                        <img class="card__inner-image" src="./images/blog2LG.png" alt="">
+                                        <div class="card__text">
+                                            <a class="card__heading-link" href="">Долой сомнения! Весь мир открыт для
+                                                вас!</a>
+                                            <p class="card__description">Для современного мира базовый вектор развития
+                                                предполагает независимые способы реализации соответствующих условий
+                                                активизации.</p>
+                                            <div class="card__other">
+                                                <p class="card__date">01/04/2023</p>
+                                                <a class="card__link" href="">читать статью</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <img class="card__outter-image" src="./images/blog3.png" alt="">
+                                    <div class="card__content">
+                                        <img class="card__inner-image" src="./images/blog3LG.png" alt="">
+                                        <div class="card__text">
+                                            <a class="card__heading-link" href="">Как подготовиться к путешествию
+                                                одному?</a>
+                                            <p class="card__description">Для современного мира базовый вектор развития
+                                                предполагает независимые способы реализации соответствующих условий
+                                                активизации.</p>
+                                            <div class="card__other">
+                                                <p class="card__date">01/04/2023</p>
+                                                <a class="card__link" href="">читать статью</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider__slide">
+                                <div class="card">
+                                    <img class="card__outter-image" src="./images/blog4.png" alt="">
+                                    <div class="card__content">
+                                        <img class="card__inner-image" src="./images/blog4LG.png" alt="">
+                                        <div class="card__text">
+                                            <a class="card__heading-link" href="">Индия ... летим?</a>
+                                            <p class="card__description">Для современного мира базовый вектор развития
+                                                предполагает независимые способы реализации соответствующих условий
+                                                активизации.</p>
+                                            <div class="card__other">
+                                                <p class="card__date">01/04/2023</p>
+                                                <a class="card__link" href="">читать статью</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="blog__button button">Другие материалы</button>
+                </div>
+            </div>
+        </section>
+        <section class="photo">
+            <div class="container">
+                <div class="photo__content">
+                    <div class="photo__text">
+                        <p class="photo__subtitle subtitle">фото-отчет</p>
+                        <h2 class="photo__heading heading">Делимся впечатлениями</h2>
+                    </div>
+                    <div class="slider">
+                        <div class="slider__slides">
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo1.png" alt="">
+                            </div>
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo2.png" alt="">
+                            </div>
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo3.png" alt="">
+                            </div>
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo4.png" alt="">
+                            </div>
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo5.png" alt="">
+                            </div>
+                            <div class="slider__slide">
+                                <img class="slider__image" src="./images/photo6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images-container">
+                        <div class="images-container__row">
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo1.png" alt=""></button>
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo2.png" alt=""></button>
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo3.png" alt=""></button>
+                        </div>
+                        <div class="images-container__row">
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo4.png" alt=""></button>
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo5.png" alt=""></button>
+                            <button class="images-container__button" onclick="sizeChange(this)"><img
+                                    class="images-container__image" src="./images/photo6.png" alt=""></button>
+                        </div>
+                    </div>
+                    <button class="photo__button button">Наш pinterest</button>
+                </div>
+        </section>
+        <section class="mail">
+            <div class="container">
+                <div class="mail__content">
+                    <div class="mail__text">
+                        <p class="mail__subtitle subtitle">актуально</p>
+                        <h2 class="mail__heading heading">Полезные рассылки о путешествиях</h2>
+                    </div>
+                    <form class="form">
+                        <p class="form__heading">Введите e-mail адрес</p>
+                        <div class="form__body">
+                            <input class="form__input" type="email" placeholder="name@domain.com">
+                            <button class="form__button button">Подписаться на новости</button>
+                        </div>
+                        <p class="form__description">подписываясь на новости, вы автоматически соглашаетесь с <a
+                                class="form__link" href="">условиями
+                                обработки персональных данных</a> и <a class="form__link" href="">правилами рекламных
+                                рассылок</a> </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact__content">
+                    <div class="company">
+                        <p class="company__heading contact__heading">Компания «РумТибет»</p>
+                        <p class="company__description contact__text">Его корни уходят в один фрагмент классической
+                            латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор
+                            латыни из колледжа Hampden-Sydney.</p>
+                        <div class="company__contacts">
+                            <a class="contact__link contact__text company__text" href="">info@domain.com</a>
+                            <a class="contact__link contact__text company__text" href="">+7 (123) 456-78-90</a>
+                        </div>
+                        <div class="company__social">
+                            <a class="company__social-link" href=""><svg width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16 2.66675C8.63996 2.66675 2.66663 8.64008 2.66663 16.0001C2.66663 23.3601 8.63996 29.3334 16 29.3334C23.36 29.3334 29.3333 23.3601 29.3333 16.0001C29.3333 8.64008 23.36 2.66675 16 2.66675ZM22.1866 11.7334C21.9866 13.8401 21.12 18.9601 20.68 21.3201C20.4933 22.3201 20.12 22.6534 19.7733 22.6934C19 22.7601 18.4133 22.1868 17.6666 21.6934C16.4933 20.9201 15.8266 20.4401 14.6933 19.6934C13.3733 18.8268 14.2266 18.3468 14.9866 17.5734C15.1866 17.3734 18.6 14.2668 18.6666 13.9867C18.6759 13.9443 18.6747 13.9003 18.663 13.8585C18.6514 13.8167 18.6298 13.7783 18.6 13.7468C18.52 13.6801 18.4133 13.7067 18.32 13.7201C18.2 13.7467 16.3333 14.9868 12.6933 17.4401C12.16 17.8001 11.68 17.9868 11.2533 17.9734C10.7733 17.9601 9.86663 17.7068 9.18663 17.4801C8.34663 17.2134 7.69329 17.0668 7.74663 16.6001C7.77329 16.3601 8.10663 16.1201 8.73329 15.8668C12.6266 14.1734 15.2133 13.0534 16.5066 12.5201C20.2133 10.9734 20.9733 10.7067 21.48 10.7067C21.5866 10.7067 21.84 10.7334 22 10.8667C22.1333 10.9734 22.1733 11.1201 22.1866 11.2268C22.1733 11.3068 22.2 11.5468 22.1866 11.7334Z"
+                                        fill="currentColor" />
+                                </svg></a>
+                            <a class="company__social-link" href=""><svg width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.36 2.99976C8.98138 2.99976 3 8.98114 3 16.3598C3 23.7384 8.98138 29.7198 16.36 29.7198C23.7386 29.7198 29.72 23.7384 29.72 16.3598C29.72 8.98114 23.7386 2.99976 16.36 2.99976ZM21.498 18.0729C21.498 18.0729 22.6796 19.2391 22.9704 19.7805C22.9788 19.7916 22.9829 19.8027 22.9857 19.8083C23.104 20.0073 23.1318 20.1618 23.0734 20.2773C22.976 20.4693 22.642 20.564 22.5279 20.5723H20.4404C20.2956 20.5723 19.9922 20.5348 19.6248 20.2815C19.3423 20.0839 19.064 19.7596 18.7926 19.4437C18.3877 18.9733 18.037 18.5669 17.6835 18.5669C17.6386 18.5669 17.594 18.5739 17.5513 18.5878C17.2841 18.6741 16.9417 19.0554 16.9417 20.0713C16.9417 20.3886 16.6912 20.5709 16.5145 20.5709H15.5584C15.2327 20.5709 13.5363 20.4568 12.0333 18.8717C10.1935 16.9303 8.53744 13.0365 8.52352 13.0003C8.41915 12.7484 8.63486 12.6134 8.87005 12.6134H10.9784C11.2595 12.6134 11.3514 12.7846 11.4154 12.9363C11.4906 13.113 11.7661 13.8158 12.2184 14.6063C12.9518 15.8949 13.4013 16.4182 13.7618 16.4182C13.8293 16.4174 13.8957 16.4002 13.9552 16.3681C14.4256 16.1065 14.3379 14.4295 14.317 14.0816C14.317 14.0162 14.3156 13.3315 14.0749 13.0031C13.9023 12.7651 13.6087 12.6746 13.4305 12.6412C13.5026 12.5417 13.5976 12.4611 13.7075 12.406C14.0303 12.2446 14.6121 12.2209 15.1896 12.2209H15.5111C16.1373 12.2293 16.2988 12.2696 16.5256 12.3267C16.9849 12.4366 16.9946 12.7331 16.9542 13.7476C16.9417 14.0357 16.9292 14.3613 16.9292 14.7454C16.9292 14.8289 16.925 14.918 16.925 15.0126C16.9111 15.5289 16.8944 16.1148 17.259 16.3556C17.3066 16.3854 17.3615 16.4013 17.4177 16.4015C17.5443 16.4015 17.9256 16.4015 18.9582 14.6299C19.2767 14.0597 19.5534 13.4671 19.7863 12.8569C19.8072 12.8207 19.8684 12.7094 19.9408 12.6663C19.9942 12.639 20.0534 12.6252 20.1133 12.6259H22.5919C22.8619 12.6259 23.047 12.6663 23.0817 12.7706C23.143 12.9363 23.0706 13.4414 21.9392 14.9737L21.434 15.6403C20.4084 16.9846 20.4084 17.0528 21.498 18.0729Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a class="company__social-link" href=""><svg width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.0533 28.7201C13.3333 29.1068 14.6266 29.3334 16 29.3334C19.5362 29.3334 22.9276 27.9287 25.4281 25.4282C27.9285 22.9277 29.3333 19.5363 29.3333 16.0001C29.3333 14.2491 28.9884 12.5153 28.3184 10.8976C27.6483 9.27996 26.6662 7.81011 25.4281 6.57199C24.1899 5.33388 22.7201 4.35175 21.1024 3.68169C19.4847 3.01163 17.7509 2.66675 16 2.66675C14.249 2.66675 12.5152 3.01163 10.8975 3.68169C9.27984 4.35175 7.80998 5.33388 6.57187 6.57199C4.07138 9.07248 2.66663 12.4639 2.66663 16.0001C2.66663 21.6668 6.22663 26.5334 11.2533 28.4534C11.1333 27.4134 11.0133 25.6934 11.2533 24.5068L12.7866 17.9201C12.7866 17.9201 12.4 17.1468 12.4 15.9201C12.4 14.0801 13.5466 12.7067 14.8533 12.7067C16 12.7067 16.5333 13.5468 16.5333 14.6268C16.5333 15.7734 15.7733 17.4134 15.3866 18.9868C15.16 20.2934 16.08 21.4401 17.4133 21.4401C19.7866 21.4401 21.6266 18.9068 21.6266 15.3334C21.6266 12.1334 19.3333 9.94675 16.04 9.94675C12.28 9.94675 10.0666 12.7468 10.0666 15.6934C10.0666 16.8401 10.44 18.0001 11.0533 18.7601C11.1733 18.8401 11.1733 18.9468 11.1333 19.1468L10.7466 20.6001C10.7466 20.8268 10.6 20.9068 10.3733 20.7468C8.66663 20.0001 7.67996 17.5734 7.67996 15.6134C7.67996 11.4001 10.6666 7.57342 16.4266 7.57342C21.0133 7.57342 24.5866 10.8667 24.5866 15.2401C24.5866 19.8268 21.7466 23.5068 17.68 23.5068C16.3866 23.5068 15.12 22.8134 14.6666 22.0001L13.7733 25.1601C13.4666 26.3068 12.6266 27.8401 12.0533 28.7601V28.7201Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a class="company__social-link" href=""><svg width="32" height="32" viewBox="0 0 32 32"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 8C26.76 10.72 27.8 14.52 27.1467 18.0667C27.6933 19.0267 28 20.1467 28 21.3333C28 23.1014 27.2976 24.7971 26.0474 26.0474C24.7971 27.2976 23.1014 28 21.3333 28C20.1467 28 19.0267 27.6933 18.0667 27.1467C14.52 27.8 10.72 26.76 8 24C5.24 21.28 4.2 17.48 4.85333 13.9333C4.30667 12.9733 4 11.8533 4 10.6667C4 8.89856 4.70238 7.20286 5.95262 5.95262C7.20286 4.70238 8.89856 4 10.6667 4C11.8533 4 12.9733 4.30667 13.9333 4.85333C17.48 4.2 21.28 5.24 24 8ZM16.0533 22.88C19.88 22.88 21.7867 21.04 21.7867 18.56C21.7867 16.9733 21.04 15.28 18.1467 14.6267L15.4933 14.04C14.48 13.8133 13.3333 13.5067 13.3333 12.56C13.3333 11.6 14.1333 10.9333 15.6 10.9333C18.5733 10.9333 18.2933 12.9733 19.7733 12.9733C20.5467 12.9733 21.2133 12.52 21.2133 11.7333C21.2133 9.90667 18.2933 8.53333 15.8133 8.53333C13.1333 8.53333 10.2667 9.68 10.2667 12.72C10.2667 14.1867 10.7867 15.7467 13.6667 16.4667L17.2533 17.3733C18.3333 17.64 18.6 18.24 18.6 18.8C18.6 19.7067 17.6933 20.6 16.0533 20.6C12.84 20.6 13.28 18.1333 11.56 18.1333C10.7867 18.1333 10.2267 18.6667 10.2267 19.4267C10.2267 20.9067 12 22.88 16.0533 22.88Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="service">
+                        <p class="service__heading contact__heading">Наши услуги</p>
+                        <ul class="contact__list">
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Прогулки в горы летом</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Зимние походы в горы</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Посещение храмов в горах</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Экстремальные виды туризма</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Походы в джунглях Амазонии</span>
+                                </a>
+                                <p class="contact__new">new</p>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Поездка в Африку</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="adventures">
+                        <p class="adventures__heading contact__heading">Важно для путешествий</p>
+                        <ul class="contact__list">
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Как собраться в долгий поход?</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Жизненно важные предметы для похода</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Медицинская страховка, гарантии безопасности</span>
+                                </a>
+                            </li>
+                            <li class="contact__item"><a class="contact__link contact__text" href=""><svg
+                                        class="contact__arrow" width="10" height="14" viewBox="0 0 10 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_1_37)">
+                                            <path
+                                                d="M7.7154 8.6098L3.26527 4.15975C3.16235 4.05675 3.02495 4 2.87845 4C2.73195 4 2.59455 4.05675 2.49162 4.15975L2.1639 4.48739C1.95065 4.70089 1.95065 5.04788 2.1639 5.26105L5.90078 8.99793L2.15975 12.739C2.05683 12.842 2 12.9793 2 13.1257C2 13.2723 2.05683 13.4096 2.15975 13.5127L2.48748 13.8402C2.59048 13.9433 2.7278 14 2.8743 14C3.0208 14 3.1582 13.9433 3.26113 13.8402L7.7154 9.38613C7.81857 9.2828 7.87524 9.14484 7.87491 8.99817C7.87524 8.85094 7.81857 8.71305 7.7154 8.6098Z"
+                                                fill="currentColor" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_37">
+                                                <rect width="9.87491" height="14" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg><span>Если вы врач - загляните сюда</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">ИП Константинопольский К.К., 2024</p>
+                <p class="footer__item"><a class="footer__link" href="">Политика обработки персональных данных</a></p>
+            </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>

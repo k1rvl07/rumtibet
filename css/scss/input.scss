@@ -1,0 +1,1077 @@
+// Шрифты
+@import "./fonts.scss";
+
+// Обнуление стандартных классов
+@import "./null.scss";
+
+// Конфигурация
+@import "./configuration.scss";
+
+// Другое
+@import "./other.scss";
+
+// Стили
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  @extend %content-container;
+}
+
+.button {
+  @extend %button;
+}
+
+.item {
+  @extend %item;
+}
+
+.subtitle {
+  @extend %yellow-heading;
+}
+
+.heading {
+  @extend %simple-heading-2;
+}
+
+.description {
+  @extend %simple-text;
+}
+
+.slider {
+  @extend %slider;
+
+  &__slides {
+    @extend %slides;
+  }
+
+  &__slide {
+    @extend %slide;
+  }
+}
+
+.header {
+  @extend %container;
+  background: url("../images/Mountains.png") center center / cover no-repeat;
+  width: 390px;
+  height: 600px;
+
+  @media (min-width: 1180px) {
+    background: url("../images/MountainsLG.png") center center / cover no-repeat;
+    width: 100%;
+    max-width: 1920px;
+    height: 985px;
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  &__heading {
+    font: {
+      family: "NEXT ART";
+      weight: $bold;
+      size: 28px;
+    }
+    line-height: 150%;
+    color: $text-white;
+    margin-top: 234px;
+
+    @media (min-width: 1180px) {
+      font-size: 50px;
+      margin-top: 463px;
+    }
+  }
+
+  &__button {
+    background-color: $text-white;
+    color: $button-color;
+    margin-top: 32px;
+    font-weight: $bold;
+    padding: 16px 36px;
+
+    &:hover {
+      background-color: $button-color;
+      color: $text-white;
+      outline: white 3px solid;
+    }
+
+    @media (min-width: 1180px) {
+      display: none;
+    }
+  }
+
+  .burger {
+    display: block;
+    color: white;
+    @extend %animation;
+    @media (min-width: 1180px) {
+      display: none;
+    }
+  }
+
+  &__open {
+    &:hover {
+      color: $button-color;
+    }
+    &:active {
+      color: $button-color;
+    }
+  }
+
+  &__close {
+    margin-top: 26px;
+    margin-left: auto;
+    &:hover {
+      color: $text-yellow;
+    }
+    &:active {
+      color: $text-yellow;
+    }
+    @media (min-width: 1180px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: $button-color;
+    z-index: 10;
+  }
+
+  .menu {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 258px;
+    &__link {
+      @extend %navbar-link;
+    }
+    &__link {
+      display: flex;
+      gap: 8px;
+    }
+
+    &__icon {
+      margin-bottom: auto;
+    }
+  }
+
+  &__logo {
+    @media (min-width: 1180px) {
+      width: 137px;
+    }
+  }
+
+  &__nav-button {
+    display: none;
+    @media (min-width: 1180px) {
+      display: block;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    &__list {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    &__button {
+      margin-left: 49px;
+      padding: 12px 24px;
+    }
+
+    &__link {
+      @extend %navbar-link;
+    }
+  }
+
+  .form {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    margin-top: 41px;
+
+    @media (min-width: 1180px) {
+      display: block;
+    }
+
+    &__container {
+      display: none;
+      flex-direction: row;
+      gap: 24px;
+      padding: 42px;
+
+      @media (min-width: 1180px) {
+        display: flex;
+      }
+    }
+
+    &__option {
+      color: $text-black;
+    }
+
+    &__input {
+      @extend %input;
+    }
+
+    &__text {
+      @extend %simple-text;
+      color: $text-white;
+      padding-left: 6px;
+      padding-top: 8;
+    }
+    &__button {
+      background-color: $text-white;
+      color: $button-color;
+      margin-top: 3px;
+      font-weight: $bold;
+
+      &:hover {
+        background-color: $button-color;
+        color: $text-white;
+        outline: white 3px solid;
+      }
+    }
+  }
+}
+
+.about {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media (min-width: 1180px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  &__content {
+    @media (min-width: 1180px) {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    @media (min-width: 1180px) {
+      width: 580px;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+
+    @media (min-width: 1180px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    margin-left: 91px;
+    margin-top: 24px;
+
+    @media (min-width: 1180px) {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+
+  &__video {
+    position: relative;
+
+    @media (min-width: 1180px) {
+      margin-left: 130px;
+      margin-top: 126px;
+    }
+
+    &-image {
+      @media (min-width: 1180px) {
+        width: 350px;
+        height: 400px;
+      }
+    }
+  }
+
+  &__play-button {
+    @extend %animation;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(253, 253, 253, 0.6);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #1a3e3e;
+
+    &:hover {
+      background-color: rgba(26, 62, 62, 0.8);
+      color: white;
+    }
+  }
+
+  &__play-img {
+    margin-top: 8px;
+    margin-left: 2px;
+  }
+
+  &__figure-container {
+    margin-top: 40px;
+    position: relative;
+
+    @media (min-width: 1180px) {
+      width: 480px;
+      height: 526px;
+    }
+  }
+
+  &__image {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    @media (min-width: 1180px) {
+      display: block;
+    }
+  }
+}
+
+.programms {
+  background-color: #f3f5f4;
+  padding: 50px 0;
+  @media (min-width: 1180px) {
+    padding: 80px 0;
+  }
+  &__content {
+    @media (min-width: 1180px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    @media (min-width: 1180px) {
+      width: 580px;
+    }
+  }
+
+  &__image {
+    display: none;
+    @media (min-width: 1180px) {
+      display: block;
+    }
+  }
+
+  &__description {
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+    @media (min-width: 1180px) {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    margin-left: 73px;
+
+    @media (min-width: 1180px) {
+      margin-top: 40px;
+      margin-left: 0;
+    }
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @media (min-width: 1180px) {
+      gap: 40px;
+    }
+
+    &__heading {
+      @extend %simple-heading-3;
+    }
+
+    &__description {
+      @extend %advantage-text;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__text {
+      width: 292px;
+
+      @media (min-width: 1180px) {
+        width: 514px;
+      }
+    }
+
+    &__image {
+      margin-bottom: auto;
+
+      @media (min-width: 1180px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.direction {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media (min-width: 1180px) {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+  &__text {
+    @media (min-width: 1180px) {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    margin-top: 32px;
+    margin-left: 75px;
+
+    @media (min-width: 1180px) {
+      margin-top: 50px;
+      margin-left: 468px;
+    }
+  }
+
+  .card {
+    width: 285px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @media (min-width: 1180px) {
+      width: 380px;
+      height: 500px;
+    }
+
+    &__content {
+      @include flex(column, center, center, nowrap, 261px);
+      padding-top: 36.8px;
+
+      @media (min-width: 1180px) {
+        padding-top: 50px;
+        gap: 328px;
+      }
+    }
+
+    &__heading {
+      @extend %direction-card-name;
+    }
+
+    &__price-text {
+      @extend %direction-card-price;
+    }
+
+    &__main-info {
+      padding: 20px 24px;
+      @include flex(row, space-between, center, nowrap, 0px);
+    }
+
+    &__subtitle {
+      font: {
+        family: "Nunito Sans";
+        weight: $regular;
+        size: 14px;
+      }
+      color: $text-white;
+      display: none;
+
+      @media (min-width: 1180px) {
+        display: block;
+      }
+    }
+
+    &__price {
+      background-color: rgba(253, 253, 253, 0.3);
+      width: 67px;
+      height: 30px;
+      backdrop-filter: blur(5px);
+      @include flex(row, center, center, nowrap, 0px);
+
+      @media (min-width: 1180px) {
+        width: 86px;
+        height: 40px;
+      }
+    }
+
+    &__description {
+      width: 100%;
+      height: 70px;
+
+      @media (min-width: 1180px) {
+        height: 90px;
+      }
+
+      .card__substrate {
+        width: 100%;
+        background-color: rgba(253, 253, 253, 0.2);
+        border-bottom-left-radius: 32px;
+        border-bottom-right-radius: 32px;
+        backdrop-filter: blur(5px);
+      }
+    }
+
+    &__rating {
+      margin-left: auto;
+      &-text {
+        @extend %direction-card-rating-text;
+      }
+
+      .card__substrate {
+        @include flex(row, flex-end, center, nowrap, 0px);
+        margin-left: auto;
+        background-color: rgba(253, 253, 253, 0.4);
+        width: fit-content;
+        padding: 3px 8px;
+        backdrop-filter: blur(5px);
+      }
+    }
+  }
+
+  .slider {
+    margin-top: 32px;
+    width: 285px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 1180px) {
+      margin-top: 50px;
+      height: 500px;
+      width: 1180px;
+    }
+    &__slides {
+      width: 1005px;
+
+      @media (min-width: 1180px) {
+        width: auto;
+      }
+    }
+
+    &__slide {
+      width: 285px;
+      height: 400px;
+
+      &:nth-child(1) {
+        .card {
+          background: url("../images/directionCard1.png");
+        }
+      }
+
+      &:nth-child(2) {
+        .card {
+          background: url("../images/directionCard2.png");
+        }
+      }
+
+      &:nth-child(3) {
+        .card {
+          background: url("../images/directionCard3.png");
+        }
+      }
+
+      @media (min-width: 1180px) {
+        width: 380px;
+        height: 500px;
+        &:nth-child(1) {
+          .card {
+            background: url("../images/directionCard1LG.png");
+          }
+        }
+
+        &:nth-child(2) {
+          .card {
+            background: url("../images/directionCard2LG.png");
+          }
+        }
+
+        &:nth-child(3) {
+          .card {
+            background: url("../images/directionCard3LG.png");
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #f3f5f4;
+  @media (min-width: 1180px) {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  &__text {
+    @media (min-width: 1180px) {
+      text-align: center;
+    }
+  }
+  &__button {
+    margin-left: 81px;
+    margin-top: 32px;
+    @media (min-width: 1180px) {
+      margin-left: 480px;
+      margin-top: 50px;
+    }
+  }
+  .slider {
+    width: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+
+    @media (min-width: 1180px) {
+      width: 1180px;
+      margin-top: 50px;
+    }
+    &__slides {
+      width: 1212px;
+      @media (min-width: 1180px) {
+        width: auto;
+        @include flex(row, space-between, flex-start, wrap, 0px);
+      }
+    }
+
+    &__slide {
+      &:nth-child(3) {
+        @media (min-width: 1180px) {
+          margin-top: 24px;
+        }
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        .card__description {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          line-height: 1.2em;
+          max-height: calc(1.2em * 4);
+          -webkit-box-orient: vertical;
+          @media (min-width: 1180px) {
+            max-height: calc(1.2em * 6);
+          }
+        }
+      }
+      &:nth-child(4) {
+        @media (min-width: 1180px) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+  .card {
+    background-color: $text-white;
+    width: 285px;
+    height: 496px;
+    border-radius: 10px;
+
+    @media (min-width: 1180px) {
+      width: 580px;
+      height: 312px;
+    }
+    &__content {
+      padding: 16px;
+
+      @media (min-width: 1180px) {
+        @include flex(row, space-between, center, nowrap, 24px);
+      }
+    }
+    &__text {
+      @include flex(column, space-between, flex-start, nowrap, 0px);
+      height: 184px;
+
+      @media (min-width: 1180px) {
+        height: 248px;
+      }
+    }
+    &__outter-image {
+      @media (min-width: 1180px) {
+        display: none;
+      }
+    }
+    &__inner-image {
+      display: none;
+
+      @media (min-width: 1180px) {
+        display: block;
+      }
+    }
+    &__other {
+      @include flex(row, space-between, center, nowrap, 80px);
+    }
+    &__heading-link {
+      @extend %blog-card-heading;
+    }
+
+    &__description {
+      @extend %blog-card-description;
+
+      @media (min-width: 1180px) {
+        margin-bottom: auto;
+        margin-top: 24px;
+      }
+    }
+
+    &__date {
+      @extend %blog-card-date;
+    }
+
+    &__link {
+      @extend %blog-card-link;
+    }
+  }
+}
+
+.photo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (min-width: 1180px) {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+
+  &__text {
+    @media (min-width: 1180px) {
+      text-align: center;
+    }
+  }
+
+  &__button {
+    margin-left: 102px;
+    margin-top: 32px;
+    @media (min-width: 1180px) {
+      margin-left: 501px;
+      margin-top: 50px;
+    }
+  }
+
+  .slider {
+    width: 280px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+
+    @media (min-width: 1180px) {
+      display: none;
+    }
+    &__slides {
+      width: 1780px;
+      height: 250px;
+    }
+
+    &__slide {
+      width: 280px;
+      height: 250px;
+    }
+  }
+
+  .images-container {
+    display: none;
+    margin-top: 40px;
+    @media (min-width: 1180px) {
+      display: block;
+    }
+
+    &__button {
+      width: 280px;
+      height: 250px;
+      transition: width 0.65s ease-out;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      &:nth-child(2) {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.mail {
+  @media (min-width: 1180px) {
+    position: absolute;
+    width: 1180px;
+    right: calc((100vw - 1180px) / 2);
+  }
+  .container {
+    background-color: $text-white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+  }
+
+  &__content {
+    padding: 24px;
+
+    @media (min-width: 1180px) {
+      @include flex(row, space-between, center, nowrap, 0px);
+      padding: 40px 100px;
+    }
+  }
+
+  &__text {
+    @media (min-width: 1180px) {
+      width: 380px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: 1180px) {
+      font-size: 26px;
+      margin-bottom: 26px;
+      content: "Получайте полезные рассылки о путешествиях";
+    }
+  }
+
+  &__subtitle {
+    @media (min-width: 1180px) {
+      font-size: 18px;
+    }
+  }
+
+  .form {
+    @media (min-width: 1180px) {
+      width: 536px;
+    }
+    &__heading {
+      font: {
+        family: "Nunito Sans";
+        weight: $bold;
+        size: 16px;
+      }
+      margin-top: 18px;
+      margin-bottom: 8px;
+
+      @media (min-width: 1180px) {
+        margin-top: 0;
+      }
+    }
+
+    &__body {
+      @media (min-width: 1180px) {
+        @include flex(row, space-between, center, nowrap, 0px);
+      }
+    }
+
+    &__input {
+      width: 310px;
+      height: 44px;
+      background-color: #f3f5f4;
+      border-radius: 4px;
+      padding-left: 16px;
+      @extend %mail-input-text;
+      &:focus,
+      &:active {
+        transition: 0.15s;
+        outline: 2px solid $button-color;
+      }
+      &::placeholder {
+        @extend %mail-input-text;
+      }
+
+      @media (min-width: 1180px) {
+        width: 280px;
+      }
+    }
+
+    &__button {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      @media (min-width: 1180px) {
+        padding: 12px 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &__description {
+      @extend %mail-description;
+
+      @media (min-width: 1180px) {
+        margin-top: 8px;
+      }
+    }
+
+    &__link {
+      text-decoration: underline;
+      color: $text-black;
+      transition: 0.25s;
+      &:hover {
+        transition: 0.25s;
+        color: $text-yellow;
+      }
+    }
+  }
+}
+
+.contact {
+  margin-top: 50px;
+  padding-bottom: 80px;
+  background-color: $button-color;
+  @media (min-width: 1180px) {
+    margin-top: 200px;
+    padding-top: 180px;
+  }
+  &__content {
+    @media (min-width: 1180px) {
+      @include flex(row, space-between, top, nowrap, 0px);
+    }
+  }
+  &__text {
+    @extend %contact-text;
+  }
+  &__heading {
+    @extend %contact-heading;
+    padding-top: 50px;
+
+    @media (min-width: 1180px) {
+      padding-top: 0px;
+    }
+  }
+
+  &__item {
+    @extend %item;
+    @include flex(row, flex-start, center, nowrap, 8px);
+  }
+
+  &__link {
+    @extend %contact-link;
+  }
+  &__arrow {
+    margin-bottom: auto;
+    min-width: 10px;
+    min-height: 14px;
+  }
+  &__list {
+    margin-top: 20px;
+    @include flex(column, space-between, flex-start, nowrap, 16px);
+    .contact__link {
+      @include flex(row, flex-start, center, nowrap, 8px);
+    }
+  }
+  &__new {
+    @extend %contact-new;
+  }
+  .company {
+    @media (min-width: 1180px) {
+      width: 480px;
+    }
+
+    &__text {
+      font-weight: $semi-bold;
+    }
+    &__contacts {
+      @include flex(row, flex-start, center, nowrap, 24px);
+    }
+    &__description {
+      margin-top: 17px;
+      margin-bottom: 30px;
+
+      @media (min-width: 1180px) {
+        margin-bottom: 80px;
+      }
+    }
+    &__social {
+      @include flex(row, flex-start, center, nowrap, 16px);
+      margin-top: 30px;
+
+      @media (min-width: 1180px) {
+        margin-top: 32px;
+      }
+      &-link {
+        @extend %animation;
+        color: white;
+        &:hover {
+          transition: 0.25s;
+          color: $text-yellow;
+          scale: 1.2;
+        }
+        &:active {
+          transition: 0.1s;
+          color: $text-yellow;
+          scale: 0.9;
+        }
+      }
+    }
+    .contact__link {
+      @extend %animation;
+    }
+  }
+  .service,
+  .adventures {
+    width: 280px;
+  }
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $text-black;
+  @media (min-width: 1180px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  &__content {
+    @include flex(column, space-between, center, nowrap, 8px);
+
+    @media (min-width: 1180px) {
+      @include flex(row, space-between, center, nowrap, 0px);
+    }
+  }
+  &__text {
+    @extend %footer-text;
+  }
+
+  &__item {
+    @extend %animation;
+    width: fit-content;
+  }
+
+  &__link {
+    @extend %footer-text;
+
+    transition: 0.5s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

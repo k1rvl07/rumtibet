@@ -1,0 +1,362 @@
+// Переменные
+$text-yellow: #f2be22;
+$text-white: #fdfdfd;
+$text-black: #18121e;
+$button-color: #1a3e3e;
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$black: 900;
+$extra-black: 1000;
+
+// Миксины
+@mixin flex(
+  $direction: row,
+  $justify: flex-start,
+  $align: flex-start,
+  $wrap: nowrap,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+// Шаблоны
+%container {
+  width: 390px;
+  margin: 0 auto;
+
+  @media (min-width: 1180px) {
+    width: 100%;
+  }
+}
+
+%animation {
+  transition: 0.5s;
+
+  &:hover {
+    transition: 0.5s;
+    scale: 1.12;
+  }
+
+  &:active {
+    transition: 0.05s;
+    scale: 0.9;
+  }
+}
+
+%content-container {
+  width: 358px;
+  margin: 0 auto;
+
+  @media (min-width: 1180px) {
+    width: 1180px;
+  }
+}
+
+%simple-text {
+  font: {
+    family: "Nunito Sans";
+    weight: $regular;
+    size: 16px;
+  }
+  color: $text-black;
+
+  @media (min-width: 1180px) {
+    font-size: 18px;
+  }
+}
+
+%simple-heading-2 {
+  font: {
+    family: "Nunito Sans";
+    weight: $extra-bold;
+    size: 24px;
+  }
+  color: $text-black;
+
+  @media (min-width: 1180px) {
+    font-size: 32px;
+  }
+}
+
+%simple-heading-3 {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 18px;
+  }
+  margin-bottom: 4px;
+
+  color: $text-black;
+}
+
+%advantage-text {
+  font: {
+    family: "Nunito Sans";
+    weight: $regular;
+    size: 14px;
+  }
+  color: $text-black;
+}
+
+%yellow-heading {
+  font: {
+    family: "Nunito Sans";
+    weight: $regular;
+    size: 16px;
+  }
+  color: $text-yellow;
+  margin-bottom: 8px;
+
+  @media (min-width: 1180px) {
+    font-size: 24px;
+  }
+}
+
+%direction-card-name {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 18px;
+  }
+  color: $text-white;
+
+  @media (min-width: 1180px) {
+    font-size: 24px;
+  }
+}
+
+%direction-card-price {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 16px;
+  }
+  color: $text-white;
+
+  @media (min-width: 1180px) {
+    font-size: 20px;
+  }
+}
+
+%direction-card-rating-text {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 14px;
+  }
+  color: $text-black;
+}
+
+%blog-card-heading {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 20px;
+  }
+  color: $text-black;
+  @extend %animation;
+  &:hover {
+    text-decoration: underline;
+    scale: 1.08;
+  }
+  &:active {
+    scale: 0.94;
+  }
+  @media (min-width: 1180px) {
+    font-size: 24px;
+  }
+}
+
+%blog-card-description {
+  font: {
+    family: "Nunito Sans";
+    weight: $regular;
+    size: 14px;
+  }
+  color: $text-black;
+}
+
+%blog-card-date {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 14px;
+  }
+  color: $text-yellow;
+}
+
+%blog-card-link {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 14px;
+  }
+  color: $button-color;
+  @extend %animation;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+%mail-input-text {
+  font: {
+    family: "Nunito Sans";
+    weight: $light;
+    size: 14px;
+  }
+  color: $text-black;
+}
+
+%mail-description {
+  font: {
+    family: "Nunito Sans";
+    weight: $semi-bold;
+    size: 14px;
+  }
+  color: $text-black;
+}
+
+%contact-text {
+  font: {
+    family: "Nunito Sans";
+    weight: $regular;
+    size: 14px;
+  }
+  color: $text-white;
+}
+
+%contact-heading {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 20px;
+  }
+  color: $text-white;
+}
+
+%contact-new {
+  font: {
+    family: "Nunito Sans";
+    weight: $bold;
+    size: 12px;
+  }
+  color: $button-color;
+  padding: 2px 10px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+%footer-text {
+  @extend %contact-text;
+  font-weight: $semi-bold;
+}
+
+%button {
+  font: {
+    family: "Nunito Sans";
+    weight: $semi-bold;
+    size: 16px;
+  }
+  font-style: normal;
+  color: $text-white;
+  background-color: $button-color;
+  padding: 12px 24px;
+  border-radius: 4px;
+  outline: #1a3e3e 3px solid transparent;
+
+  @extend %animation;
+
+  &:hover {
+    background-color: $text-white;
+    color: $button-color;
+    outline: #1a3e3e 3px solid;
+  }
+
+  &:active {
+    background-color: $text-white;
+    color: $button-color;
+  }
+
+  @media (min-width: 1180px) {
+    padding: 16px 36px;
+  }
+}
+
+%item {
+  width: fit-content;
+  @extend %animation;
+}
+
+%navbar-link {
+  text-decoration: none;
+  color: $text-white;
+  font: {
+    family: "Nunito Sans";
+    weight: $semi-bold;
+    size: 14px;
+  }
+  font-style: normal;
+  transition: 0.5s;
+
+  &:hover {
+    color: $text-yellow;
+    text-decoration: solid underline;
+    transition: 0.5s;
+  }
+
+  @media (min-width: 1180px) {
+    font-size: 18px;
+  }
+}
+
+%contact-link {
+  transition: 0.5s;
+
+  &:hover {
+    color: $text-yellow;
+    text-decoration: solid underline;
+    transition: 0.5s;
+  }
+}
+
+%input {
+  @extend %simple-text;
+  color: $text-white;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 16px;
+  outline: none;
+  width: 270px;
+}
+
+%slider {
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  @media (min-width: 1180px) {
+    overflow: hidden;
+  }
+}
+
+%slides {
+  @include flex(row, space-between, center, nowrap, 0px);
+  transition: transform 0.001s ease-in-out;
+}
+
+%slide {
+  scroll-snap-align: start;
+  overflow: hidden;
+  position: relative;
+}

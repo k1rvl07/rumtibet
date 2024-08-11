@@ -12,17 +12,15 @@ const slider = document.querySelector(".slider");
 let currentSlide = 0;
 let startX, endX, swipeDistance;
 
-// Функция для проверки, находится ли точка внутри элемента
 function isPointInsideElement(pointX, element) {
   const rect = element.getBoundingClientRect();
   return pointX >= rect.left && pointX <= rect.right;
 }
 
-// Add event listeners for touchstart and touchmove
 slider.addEventListener("touchstart", (event) => {
   startX = event.touches[0].clientX;
   if (!isPointInsideElement(startX, slider)) {
-    startX = null; // Если начальная точка не внутри слайдера, сбрасываем startX
+    startX = null; 
   }
 });
 
@@ -32,31 +30,24 @@ slider.addEventListener("touchmove", (event) => {
     if (isPointInsideElement(endX, slider)) {
       swipeDistance = Math.abs(endX - startX);
     } else {
-      endX = null; // Если конечная точка не внутри слайдера, сбрасываем endX
+      endX = null; 
     }
   }
 });
 
-// Add event listener for touchend
 slider.addEventListener("touchend", () => {
   if (swipeDistance > 1 && startX !== null && endX !== null) {
     if (endX < startX) {
-      // Swipe left
       swiper.slideNext();
     } else {
-      // Swipe right
       swiper.slidePrev();
     }
   }
-  // Сбрасываем значения для следующего свайпа
   startX = endX = swipeDistance = null;
 });
 function sizeChange(button) {
-  // Get the row containing the clicked button
   const row = button.parentNode;
-  // Get all buttons in the row
   const buttons = row.querySelectorAll(".images-container__button");
-  // Find the currently enlarged button in the row
   let enlargedButton = null;
   buttons.forEach((btn) => {
     if (btn.style.width === "580px") {
@@ -64,12 +55,10 @@ function sizeChange(button) {
     }
   });
 
-  // If the clicked button is already enlarged, do nothing
   if (enlargedButton === button) {
     return;
   }
 
-  // Reset the enlarged button if it exists and is not the clicked button
   if (enlargedButton && enlargedButton !== button) {
     const enlargedImg = enlargedButton.querySelector(
       ".images-container__image"
@@ -80,7 +69,6 @@ function sizeChange(button) {
     enlargedButton.style.width = "280px";
   }
 
-  // Enlarge the clicked button
   const img = button.querySelector(".images-container__image");
   if (img.src.endsWith(".png")) {
     img.src = img.src.replace(".png", "LG.png");
@@ -88,7 +76,6 @@ function sizeChange(button) {
   button.style.width = "580px";
 }
 
-// Initialize the first button in the first row and the second button in the second row
 window.onload = function () {
   const firstRow = document.querySelector(
     ".images-container__row:first-of-type"
